@@ -102,9 +102,13 @@ Create a MySQL database named url_shortener (or update DB_DATABASE in .env to ma
 
 Run migrations to create the necessary tables:
 
-**run cmd**
+## run cmd for table migrate
 
 php artisan migrate
+
+## run cmd for seeder run
+
+php artisan db:seed
 
 **Start the Development Server**
 
