@@ -64,3 +64,50 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Project setup 
+
+## 1. Clone the Repository
+
+## 2. Install Dependencies
+### Install PHP dependencies using Composer:
+composer install
+## 3. Configure Environment
+
+Copy the .env.example file to .env:
+
+APP_NAME=URL_Shortener
+APP_ENV=local
+APP_KEY=
+APP_DEBUG=true
+APP_URL=http://localhost
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=url_shortener
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+
+SESSION_DRIVER=file
+SESSION_LIFETIME=120
+
+**Generate an application key:**
+
+php artisan key:generate
+
+**Set Up the Database**
+
+Create a MySQL database named url_shortener (or update DB_DATABASE in .env to match your database name).
+
+Run migrations to create the necessary tables:
+
+**run cmd**
+
+php artisan migrate
+
+**Start the Development Server**
+
+php artisan serve
+
+
