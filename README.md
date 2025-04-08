@@ -106,6 +106,16 @@ Run migrations to create the necessary tables:
 
 php artisan migrate
 
+## run this all cmd for role and permission 
+
+1. php artisan permission:create-role SuperAdmin
+2. php artisan permission:create-role Admin
+3. php artisan permission:create-role Member
+4. php artisan permission:create-permission create-short-url
+5. php artisan permission:create-permission view-company-short-urls
+6. php artisan permission:create-permission view-all-short-urls
+7. php artisan permission:create-permission invite-user
+
 ## run cmd for seeder run
 
 php artisan db:seed
