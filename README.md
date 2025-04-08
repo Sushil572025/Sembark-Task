@@ -124,4 +124,5 @@ php artisan db:seed
 
 php artisan serve
 
+## every role base user password is password
 
