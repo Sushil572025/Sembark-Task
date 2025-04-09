@@ -28,7 +28,6 @@ class InviteController extends Controller
         if ($user->hasRole('SuperAdmin') && $request->role === 'Member') {
             return redirect()->back()->with('error', 'SuperAdmin can only invite Admins.');
         }
-        DB::transaction();
         $company = $user->hasRole('SuperAdmin') ? Company::create(['name' => $request->email]) : $user->company;
 
         $newUser = User::create([
@@ -51,7 +50,6 @@ class InviteController extends Controller
             $newUser->givePermissionTo('invite-user');
             $newUser->givePermissionTo('create-short-url');
         }
-        DB::commit();
 
         return redirect()->back()->with('success', 'User invited successfully.');
     }
