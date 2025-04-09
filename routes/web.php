@@ -35,5 +35,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/clients', [ClientsController::class, 'index'])->name('client');
     Route::get('/short-urls', [ShortUrlController::class, 'index'])->name('short-urls.index');
     Route::post('/short-urls', [ShortUrlController::class, 'store'])->name('short-urls.store');
-    Route::get('/{shortCode}', [ShortUrlController::class, 'redirect'])->name('short-url.redirect');
 });
+Route::get('/{shortCode}', [ShortUrlController::class, 'redirect'])->name('short-url.redirect');
